@@ -10,12 +10,12 @@ import java.time.Period;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
     private String name;
     private String email;
     private LocalDate dob;
     @Transient
-    private Integer age;
+    private int age;
 
     public Student() {
     }
@@ -26,11 +26,11 @@ public class Student {
         this.dob = dob;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -58,11 +58,11 @@ public class Student {
         this.dob = dob;
     }
 
-    public Integer getAge() {
+    public int getAge() {
         return Period.between(dob, LocalDate.now()).getYears();
     }
 
-    public void setAge(Integer age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
