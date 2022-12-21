@@ -4,70 +4,71 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.Period;
 
-@SuppressWarnings("unused")
 @Entity
 @Table
 public class Student {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    private String name;
-    private String email;
-    private LocalDate dob;
-    @Transient
-    private int age;
 
-    public Student() {
-    }
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String name;
+	private String email;
+	private LocalDate dob;
+	@Transient
+	private int age;
 
-    public Student(String name, String email, LocalDate dob) {
-        this.name = name;
-        this.email = email;
-        this.dob = dob;
-    }
+	public Student() {
+	}
 
-    public int getId() {
-        return id;
-    }
+	public Student(String name, String email, LocalDate dob) {
+		this.name = name;
+		this.email = email;
+		this.dob = dob;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public LocalDate getDob() {
-        return dob;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public void setDob(LocalDate dob) {
-        this.dob = dob;
-    }
+	public LocalDate getDob() {
+		return dob;
+	}
 
-    public int getAge() {
-        return Period.between(dob, LocalDate.now()).getYears();
-    }
+	public void setDob(LocalDate dob) {
+		this.dob = dob;
+	}
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+	public int getAge() {
+		return Period.between(dob, LocalDate.now()).getYears();
+	}
 
-    @Override
-    public String toString() {
-        return "Student{" + "id=" + id + ", name='" + name + '\'' + ", email='" + email + '\'' + ", dob=" + dob + ", age=" + age + '}';
-    }
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "Student{" + "id=" + id + ", name='" + name + '\'' + ", email='" + email + '\'' + ", dob=" + dob
+				+ ", age=" + age + '}';
+	}
 }
