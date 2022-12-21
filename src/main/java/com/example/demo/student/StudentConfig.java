@@ -1,6 +1,6 @@
 package com.example.demo.student;
 
-import org.springframework.boot.CommandLineRunner;
+//import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,9 +10,9 @@ import java.util.List;
 
 @Configuration
 public class StudentConfig {
-    @Bean
-    CommandLineRunner commandLineRunner(StudentRepository repository) {
-        return args -> {
+//    @Bean
+//    CommandLineRunner commandLineRunner(StudentRepository repository) {
+//        return args -> {
 //            Student igor = new Student(
 //                    "Igor",
 //                    "igor@mail.com",
@@ -24,8 +24,8 @@ public class StudentConfig {
 //                    "marcel@mail.com",
 //                    LocalDate.of(1989, Month.FEBRUARY, 11)
 //            );
-
+//
 //            repository.saveAll(List.of(igor, marcel));
-        };
-    }
+//        };
+//    }
 }
